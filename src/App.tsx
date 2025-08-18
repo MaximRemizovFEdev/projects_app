@@ -5,6 +5,7 @@ import { CVFormPage } from "./pages/CVFormPage/CVFormPage";
 import { Header } from "./components/Header/Header";
 import { Footer } from "./components/Footer/Footer";
 import { GoalsPage } from "./pages/GoalsPage/GoalsPage";
+import { ToDoPage } from "./pages/ToDoPage/ToDoPage";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<ListPage />} />
           <Route path="/cv" element={<CVFormPage />} />
           <Route path="/goals" element={<GoalsPage />} />
+          <Route path="/todos" element={<ToDoPage />} />
         </Routes>
         <Footer />
       </BrowserRouter>
