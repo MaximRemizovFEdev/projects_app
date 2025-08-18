@@ -9,8 +9,6 @@ export default defineConfig({
     federation({
       name: "host-app",
       remotes: {
-        // 'cv-form': 'http://localhost:3001/assets/remoteEntry.js',
-        // app2: "http://localhost:8002/remoteEntryReact.js",
         app2: "http://localhost:8002/assets/remoteEntryReact.js",
       },
       shared: {
