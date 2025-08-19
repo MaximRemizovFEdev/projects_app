@@ -2,3 +2,26 @@
     max-width: 600px;
     text-align: left;
 }
+
+.title-with-icon {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: inherit;
+    display: inline-flex;
+}
+
+.icon-button:hover {
+    color: #1976d2;
+}
+
+.icon-button svg {
+    display: block;
+}
