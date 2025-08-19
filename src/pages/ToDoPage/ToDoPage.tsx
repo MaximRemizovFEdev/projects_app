@@ -3,8 +3,9 @@ import { ErrorBoundary } from "react-error-boundary";
 import { Link } from "react-router-dom";
 
 // @ts-ignore
-const Counter = React.lazy(() => import("app2/Counter")); // initReact(el)
-// import Counter from "app2/Counter";
+// const Counter = React.lazy(() => import("app2/Counter")); // test import
+const ToDoList = React.lazy(() => import("app2/ToDoList"));
+
 
 const Fallback = () => (
   <div>Сделать TODO (LS) список (мкрофронтом на другом фреймворке)</div>
@@ -21,7 +22,8 @@ export const ToDoPage = () => {
   return (
     <ErrorBoundary fallback={<GoHome />}>
       <Suspense fallback={<Fallback />}>
-        <Counter text={"Тест пропс"} />
+        {/* <Counter text={"Тест пропс"} /> */}
+        <ToDoList />
       </Suspense>
     </ErrorBoundary>
   );
