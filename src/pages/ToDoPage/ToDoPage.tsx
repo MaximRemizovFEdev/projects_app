@@ -6,10 +6,7 @@ import { Link } from "react-router-dom";
 // const Counter = React.lazy(() => import("app2/Counter")); // test import
 const ToDoList = React.lazy(() => import("app2/ToDoList"));
 
-
-const Fallback = () => (
-  <div>Сделать TODO (LS) список (мкрофронтом на другом фреймворке)</div>
-);
+const Fallback = () => <div>Загрузка TODO (LS)...</div>;
 
 const GoHome = () => (
   <>
@@ -18,12 +15,22 @@ const GoHome = () => (
   </>
 );
 
+const wrapper: React.CSSProperties = {
+  marginTop: "100px",
+  display: "flex",
+  flexDirection: "column",
+  width: "1024px",
+  textAlign: "left"
+};
+
 export const ToDoPage = () => {
   return (
     <ErrorBoundary fallback={<GoHome />}>
       <Suspense fallback={<Fallback />}>
         {/* <Counter text={"Тест пропс"} /> */}
-        <ToDoList />
+        <div style={wrapper}>
+          <ToDoList />
+        </div>
       </Suspense>
     </ErrorBoundary>
   );
